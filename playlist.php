@@ -16,12 +16,12 @@ try {
 }
 ?>
 
-<table id="playlist">
-    <?php while ($row = $result->fetch()) : ?>
-        <tr>
-            <td><?php echo htmlspecialchars($row['author']) ?></td>
-            <td><?php echo htmlspecialchars($row['song']) ?></td>
-            <td style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</td>
-        </tr>
-    <?php endwhile; ?>
-</table>
+    <table id="playlist">
+        <?php while ($row = $result->fetch()) : ?>
+            <tr>
+                <td><?php echo htmlspecialchars($row['author']) ?></td>
+                <td><?php echo htmlspecialchars($row['song']) ?></td>
+                <td style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
