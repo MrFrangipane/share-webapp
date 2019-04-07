@@ -1,5 +1,5 @@
-* {
-    color: white;
+body {
+    color : white;
     background-color: black;
     font-family: Sans-serif;
     font-size: 105%;
@@ -20,21 +20,21 @@ audio {
     display:block;
 }
 
-ul {
-    list-style: none;
-}
-
 #playlist {
-    padding-top: 50px;
+    margin-top: 60px;
+    border-collapse:collapse;
     width: 100%;
 }
 
-#playlist a{
-    text-decoration: none;
-    outline : 0;
+#playlist td {
+    padding: 8px;
 }
 
-#playlist .current-song td, .current-song a {
+#playlist tr:hover {
     background-color: darkgrey;
 }
 
+#playlist .current-song td {
+    color: black;
+    background-color: white;
+}
