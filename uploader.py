@@ -1,5 +1,5 @@
 import json
-import pymysql
+import MySQLdb
 
 
 class Database(object):
@@ -9,7 +9,7 @@ class Database(object):
             self.infos = json.load(f_config)
 
     def _request(self, request):
-        connexion = pymysql.connect(
+        connexion = MySQLdb.connect(
             self.infos['host'],
             self.infos['username'],
             self.infos['dbname'],
