@@ -1,1 +1,1 @@
-<?php require_once("site/index.php") ?>
+<?php include("site/index.php") ?>
