@@ -1,0 +1,40 @@
+* {
+    color: white;
+    background-color: black;
+    font-family: Sans-serif;
+    font-size: 105%;
+}
+
+#player {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+audio {
+    width: 100%;
+    display:block;
+}
+
+ul {
+    list-style: none;
+}
+
+#playlist {
+    padding-top: 50px;
+    width: 100%;
+}
+
+#playlist a{
+    text-decoration: none;
+    outline : 0;
+}
+
+#playlist .current-song td, .current-song a {
+    background-color: darkgrey;
+}
+
