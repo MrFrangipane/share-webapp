@@ -1,11 +1,15 @@
 var currentSong = 0;
 
+
 function updatePlayer() {
     $("#playlist tr").removeClass("current-song");
-    $("#playlist tr:eq(" + currentSong + ")").addClass("current-song");
+
     var filename = $("#playlist tr:eq(" + currentSong + ") td:eq(2)").text();
     $("#audioPlayer")[0].src = filename;
+    $("#audioPlayer")[0].load();
+    $("#playlist tr:eq(" + currentSong + ")").addClass("current-song");
 }
+
 
 function installCallbacks() {
     // PLAYLIST CLICK
@@ -26,6 +30,7 @@ function installCallbacks() {
         $("#audioPlayer")[0].play();
     });
 }
+
 
 function setupAudioPlayer() {
     installCallbacks();
