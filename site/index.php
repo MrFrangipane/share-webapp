@@ -12,7 +12,7 @@
         </audio>
     </div>
 
-    <?php include 'playlist.php'; ?>
+    <?php include 'app/playlist.php'; ?>
 
     <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="audioplayer.js"></script>
