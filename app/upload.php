@@ -1,14 +1,21 @@
 <?php
 require_once("database.php");
+require_once("rest.php");
+
 $user = $_SERVER['REDIRECT_REMOTE_USER'];
+$post_infos = read_post();
 
-$result = request('SELECT * FROM user_');
-/*print_r($result);*/
-echo("==============");
+$request_ = "SELECT * FROM user_ WHERE user_.username = '" . $user ."'";
+$result = request($request_)->fetch();
 
-print_r($_REQUEST);
-echo("==============");
+// USER EXISTS
+if( $result != false )
+{
+    $request_ = "INSERT INTO song (author, name) VALUES (" . $result['id'] . ", '" . $post_infos['song_name'] . "')";
+    $result['inserted_id'] = exec_($request_);
+}
 
-print_r($_SERVER['REDIRECT_REMOTE_USER']);
 
+header('Content-Type: application/json');
+echo json_encode($result);
 ?>
