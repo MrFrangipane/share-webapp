@@ -3,7 +3,6 @@ require_once 'config.php';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    echo "Connected to $dbname at $host successfully.";
 
     $request = 'SELECT song.id as id, author.name as author, song.name as song, timestamp FROM song
                 INNER JOIN author ON song.author = author.id
