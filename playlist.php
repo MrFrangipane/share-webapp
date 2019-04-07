@@ -1,6 +1,6 @@
 <?php
 
-$infos = json_decode(file_get_contents("config.json"));
+$infos = json_decode(file_get_contents("config.json"), true);
 $host = $infos["host"];
 $dbname = $infos["dbname"];
 $username = $infos["username"];
