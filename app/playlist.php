@@ -9,6 +9,8 @@ $password = $infos["password"];
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
+    echo($username);
+
     $request = 'SELECT song.id as id, user_.name as author, song.name as song, timestamp FROM song
                 INNER JOIN author ON song.author = user_.id
                 ORDER BY user_.name, song.timestamp DESC';
