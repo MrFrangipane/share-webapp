@@ -1,10 +1,10 @@
 <?php
 
-infos = json_decode(file_get_contents("config.json"));
-$host = infos["host"];
-$dbname = infos["dbname"];
-$username = infos["username"];
-$password = infos["password"];
+$infos = json_decode(file_get_contents("config.json"));
+$host = $infos["host"];
+$dbname = $infos["dbname"];
+$username = $infos["username"];
+$password = $infos["password"];
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
