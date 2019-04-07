@@ -10,11 +10,8 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
     $request = 'SELECT song.id as id, user_.name as author, song.name as song, timestamp FROM song
-                INNER JOIN author ON song.author = user_.id
+                INNER JOIN user_ ON song.author = user_.id
                 ORDER BY user_.name, song.timestamp DESC';
-
-
-    echo($request);
 
     $result = $conn->query($request);
     $result->setFetchMode(PDO::FETCH_ASSOC);
