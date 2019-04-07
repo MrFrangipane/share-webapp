@@ -1,4 +1,4 @@
 *.mp3
 *.ht[pa]*
-config.php
+config.json
 .idea/
