@@ -5,29 +5,67 @@ body {
     font-size: 105%;
 }
 
-#player {
+#logo {
+    margin: 20px;
+    width: 110px;
+}
+
+#header {
     width: 100%;
-    padding: 5px;
+    height: 90px;
+    font-size: 90%;
     box-sizing: border-box;
-    background-color: white;
+    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
+    border-bottom: 1px solid darkgrey;
 }
 
-audio {
+#player {
     width: 100%;
-    display:block;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid darkgrey;
+}
+
+#player img {
+    width: 20px;
+    padding: 5px;
 }
 
 #playlist {
-    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 60px;
     border-collapse:collapse;
-    width: 100%;
+    width: 400px;
+}
+
+.songTitle,
+.songDetails {
+    margin: 5px;
+}
+
+.songTitle {
+    font-size: 105%;
+    font-weight: bold;
+}
+
+.songDetails {
+    font-size: 80%;
+    color: darkgrey;
 }
 
 #playlist td {
-    padding: 8px;
+    border-bottom: 1px solid darkgrey;
+    padding-left: 10px;
 }
 
 #playlist tr:hover {
@@ -37,4 +75,8 @@ audio {
 #playlist .current-song td {
     color: black;
     background-color: white;
+}
+
+#playlist .current-song p {
+    color: black;
 }

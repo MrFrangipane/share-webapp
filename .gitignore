@@ -2,3 +2,4 @@
 *.ht[pa]*
 config.json
 .idea/
+test.py

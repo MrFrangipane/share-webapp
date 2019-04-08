@@ -16,7 +16,7 @@ function read_post() {
     if(!is_array($decoded)){
         throw new Exception('Received content contained invalid JSON!');
     }
-
+    
     return $decoded;
 }
 
