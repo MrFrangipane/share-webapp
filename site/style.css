@@ -1,3 +1,6 @@
+/* MAIN */
+/********/
+
 body {
     color : white;
     background-color: black;
@@ -5,22 +8,8 @@ body {
     font-size: 105%;
 }
 
-#logo {
-    margin: 20px;
-    width: 110px;
-}
-
-#header {
-    width: 100%;
-    height: 90px;
-    font-size: 90%;
-    box-sizing: border-box;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid darkgrey;
-}
+/* PLAYER */
+/**********/
 
 #player {
     width: 100%;
@@ -45,7 +34,7 @@ body {
     margin-top: 100px;
     margin-bottom: 60px;
     border-collapse:collapse;
-    width: 400px;
+    width: 500px;
 }
 
 .songTitle,
@@ -63,13 +52,99 @@ body {
     color: darkgrey;
 }
 
+/* HEADER */
+/**********/
+
+#logo {
+    margin: 20px;
+    width: 110px;
+}
+
+#header {
+    width: 100%;
+    height: 90px;
+    font-size: 115%;
+    box-sizing: border-box;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid darkgrey;
+}
+
+#header table {
+    width: 100%;
+    border-collapse:collapse;
+}
+
+.headerLogo {
+    margin-left: 200px;
+    width: 150px;
+    height: 80px;
+    background-image: url("icons/logo.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.headerSong {
+    width: 400px;
+    text-align: right;
+}
+
+.headerUpload {
+    width: 100px;
+}
+
+#seekBackdrop {
+    width: 500px;
+    background-color: rgb(60, 60, 60);;
+}
+
+#seekBar {
+ background-color: white;
+ height: 10px;
+ width: 0%;
+}
+
+/* DROP FILE */
+/*************/
+
+#dropfile {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    background-image: url("icons/upload.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid transparent;
+}
+
+.dragHover {
+    background-size: 60%;
+    background-color: darkgrey;
+}
+
+.dragHoverError {
+    background-size: 60%;
+    background-color: red;
+}
+
+#dropfile:hover {
+    background-size: 60%;
+}
+
+/* PLAYLIST */
+/************/
+
 #playlist td {
     border-bottom: 1px solid darkgrey;
     padding-left: 10px;
 }
 
 #playlist tr:hover {
-    background-color: darkgrey;
+    background-color: rgb(60, 60, 60);
 }
 
 #playlist .current-song td {
