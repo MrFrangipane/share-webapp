@@ -18,7 +18,9 @@
                 </td>
                 <td></td>
                 <td class="headerUpload">
-                    <div id="dropfile"></div>
+                    <div id="dropfile">
+                        Drop .mp3 here :
+                    </div>
                 </td>
             </tr>
         </table>
