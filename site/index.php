@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Frangitron Share</title>
     <link rel="stylesheet" type="text/css" href="site/style.css">
 </head>
@@ -10,10 +11,14 @@
     <div id="header">
         <table>
             <tr>
-                <td><img id="logo" src="site/icons/logo.png"></td>
-                <td>
+                <td class="headerLogo"></td>
+                <td class="headerSong">
                     <p id="songTitle" class="songTitle"></p>
                     <p id="songDetails" class="songDetails"></p>
+                </td>
+                <td></td>
+                <td class="headerUpload">
+                    <div id="dropfile"></div>
                 </td>
             </tr>
         </table>
@@ -30,15 +35,19 @@
                 <td><img id="play" src="site/icons/play.png"></td>
                 <td><img id="pause" src="site/icons/pause.png"></td>
                 <td><img id="next" src="site/icons/next.png"></td>
-                <td><div style="width:500px; background-color:darkgrey"><div id="seekBar" style="background-color: white; height: 10px; width:50%"></div></div></td>
+                <td><div id="seekBackdrop">
+                    <div id="seekBar"></div>
+                </div></td>
             </tr>
         </table>
     </div>
 
     <?php include 'app/playlist.php'; ?>
 
+
     <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="site/audioplayer.js"></script>
+    <script src="site/filedropper.js"></script>
     <script>
         setupAudioPlayer();
     </script>
