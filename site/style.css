@@ -166,6 +166,12 @@ td.expanding {
     outline-offset: -2px;
 }
 
+#form {
+    position: absolute;
+    top: 23px;
+    right: 36px;
+}
+
 .button {
     cursor: pointer;
     padding: 8px;
@@ -181,9 +187,13 @@ td.expanding {
     z-index: -1;
 }
 
+#message {
+    height: 40px;
+}
+
 #uploadDiv {
-    height: 8px;
-    margin-top: 2px;
+    height: 25px;
+    margin-top: 20px;
 }
 
 #uploadBackdrop {

@@ -21,23 +21,19 @@
                     <table id="uploadTable">
                         <tr><td>
                             <div id="dropfile"></div>
-                        </td>
-                        <td>
                             <form id="form" enctype="multipart/form-data">
                                 <input name="file" type="file" id="file" class="hiddenFormItem"/>
                                 <label for="file" class="button">Browse...</label>
                                 <input type="submit" value="Upload" id="send" class="hiddenFormItem"/>
                                 <label for="send" class="button">Send !</label>
                             </form>
-                        </td></tr>
-                        <tr><td id="message" colspan="2">UPLOADER MESSAGE HERE</td></tr>
-                        <tr><td colspan="2">
-                                <div id="uploadDiv">
-                                    <div id="uploadBackdrop">
-                                        <div id="uploadProgress"></div>
-                                    </div>
+                            <div id="uploadDiv">
+                                <div id="uploadBackdrop">
+                                    <div id="uploadProgress"></div>
                                 </div>
+                            </div>
                         </td></tr>
+                        <tr><td id="message" colspan="3"></td></tr>
                     </table>
                 </td>
             </tr>

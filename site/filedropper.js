@@ -27,6 +27,8 @@ function GUISetUploading(isUploading_)
         $("#dropfile").hide();
 
         $("#uploadDiv").show();
+
+        GUISetMessage("Uploading ...");
     }
     else
     {
