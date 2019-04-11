@@ -157,9 +157,12 @@ $("#form").submit(function(event)
 
         success: function(result) {
             progress.width("0%");
-            GUISetMessage("Upload succes !");
+            if( result["status"] == 1 ) {
+                GUISetMessage("Upload succes !");
+            } else {
+                GUISetMessage(result['error']);
+            }
             droppedFile = null;
-            console.log(result);
             GUISetUploading(false);
         }
     });
