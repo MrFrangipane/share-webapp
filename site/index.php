@@ -18,9 +18,29 @@
                 </td>
                 <td></td>
                 <td class="headerUpload">
-                    <div id="dropfile">
-                        Drop .mp3 here :
-                    </div>
+                    <table id="uploadTable">
+                        <tr><td>
+                            <div id="dropfile"></div>
+                        </td>
+                        <td>
+                            <form enctype="multipart/form-data">
+                                <input name="file" type="file" id="file" class="hiddenFormItem" />
+                                <label for="file" class="button">Browse...</label>
+                                <input type="button" value="Upload" id="send" class="hiddenFormItem"/>
+                                <label for="send" class="button">Send !</label>
+                            </form>
+                        </td></tr>
+                        <tr><td id="filename" colspan="2">
+                            Drop file on icon or browse
+                        </td></tr>
+                        <tr><td colspan="2">
+                                <div id="uploadDiv">
+                                    <div id="uploadBackdrop">
+                                        <div id="uploadProgress"></div>
+                                    </div>
+                                </div>
+                        </td></tr>
+                    </table>
                 </td>
             </tr>
         </table>
