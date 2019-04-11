@@ -38,9 +38,13 @@
                 <td><div id="next"></div></td>
                 <td><div class="playerControlSpacer"></div></td>
                 <td><div id="currentTime">0:00</div></td>
-                <td class="expanding"><div id="seekBackdrop">
-                    <div id="seekBar"></div>
-                </div></td>
+                <td class="expanding">
+                    <div id="seekClickable">
+                        <div id="seekBackdrop">
+                            <div id="seekBar"></div>
+                        </div>
+                    </div>
+                </td>
                 <td><div id="totalTime">0:00</div></td>
                 <td><div class="playerControlSpacer"></div></td>
                 <td><div id="volumeIcon"></div></td>
@@ -51,7 +55,8 @@
 
     <?php include 'app/playlist.php'; ?>
 
-    <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="site/jquery.js"></script>
+    <script src="site/jquery.scrollintoview.js"></script>
     <script src="site/audioplayer.js"></script>
     <script src="site/filedropper.js"></script>
     <script>
