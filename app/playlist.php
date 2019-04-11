@@ -9,12 +9,14 @@ $result = request(
 
 ?>
 
-<table id="playlist">
-    <?php while ($row = $result->fetch()) : ?>
-        <tr><td>
-            <p class="songTitle"><?php echo htmlspecialchars($row['song']) ?></p>
-            <p class="songDetails"><?php echo htmlspecialchars($row['author']) ?></p>
-            <p style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</p>
-        </td></tr>
-    <?php endwhile; ?>
-</table>
+<div id="playlistScrollable">
+    <table id="playlist">
+        <?php while ($row = $result->fetch()) : ?>
+            <tr><td>
+                <p class="songTitle"><?php echo htmlspecialchars($row['song']) ?></p>
+                <p class="songDetails"><?php echo htmlspecialchars($row['author']) ?></p>
+                <p style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</p>
+            </td></tr>
+        <?php endwhile; ?>
+    </table>
+</div>
