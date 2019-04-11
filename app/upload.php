@@ -3,9 +3,12 @@ require_once("database.php");
 require_once("rest.php");
 
 $user = $_SERVER['REDIRECT_REMOTE_USER'];
-$post_infos = read_post();
-$result['response'] = 'upload';
+//$post_infos = read_post();
+$result['files'] = $_FILES;
+$result['server'] = $_SERVER;
+$result['post'] = $_POST;
 
+/*
 if( $post_infos['action'] == 'register' )
 {
     $request_ = "SELECT * FROM user_ WHERE user_.username = '" . $user ."'";
@@ -23,6 +26,9 @@ if( $post_infos['action'] == 'upload' )
 {
     $result['a'] = 'b';
 }
+*/
+
+
 
 header('Content-Type: application/json');
 echo json_encode($result);

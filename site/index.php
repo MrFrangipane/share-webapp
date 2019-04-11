@@ -23,16 +23,14 @@
                             <div id="dropfile"></div>
                         </td>
                         <td>
-                            <form enctype="multipart/form-data">
-                                <input name="file" type="file" id="file" class="hiddenFormItem" />
+                            <form id="form" enctype="multipart/form-data">
+                                <input name="file" type="file" id="file" class="hiddenFormItem"/>
                                 <label for="file" class="button">Browse...</label>
-                                <input type="button" value="Upload" id="send" class="hiddenFormItem"/>
+                                <input type="submit" value="Upload" id="send" class="hiddenFormItem"/>
                                 <label for="send" class="button">Send !</label>
                             </form>
                         </td></tr>
-                        <tr><td id="filename" colspan="2">
-                            Drop file on icon or browse
-                        </td></tr>
+                        <tr><td id="message" colspan="2">UPLOADER MESSAGE HERE</td></tr>
                         <tr><td colspan="2">
                                 <div id="uploadDiv">
                                     <div id="uploadBackdrop">
@@ -81,6 +79,7 @@
     <script src="site/filedropper.js"></script>
     <script>
         setupAudioPlayer();
+        setupUploader();
     </script>
 </body>
 </html>

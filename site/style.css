@@ -166,13 +166,9 @@ td.expanding {
     outline-offset: -2px;
 }
 
-.dragHoverError {
-    background-color: red;
-}
-
 .button {
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     background-color: rgb(120, 120, 120);
 }
 
