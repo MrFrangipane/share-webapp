@@ -18,16 +18,53 @@ body {
     box-sizing: border-box;
     background-color: black;
     position: fixed;
-    left: 0;
+    left:0;
     bottom: 0;
     border-top: 1px solid darkgrey;
 }
 
-#player img {
-    width: 20px;
-    padding: 5px;
+#playerControls {
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#previous, #stop, #playpause, #next, #volumeIcon {
+    width: 25px;
+    height: 18px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#previous { background-image: url("icons/previous.png"); }
+#stop { background-image: url("icons/stop.png"); }
+#playpause { background-image: url("icons/play.png"); }
+#next { background-image: url("icons/next.png"); }
+#volumeIcon{ background-image: url("icons/vol-01.png"); }
+
+.playerControlSpacer {
+    width: 35px;
+    height: 25px;
+}
+
+#currentTime, #totalTime {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 80%;
+}
+
+#seekBackdrop {
+    width: 500px;
+    background-color: rgb(60, 60, 60);;
+}
+
+#seekBar {
+    background-color: white;
+    height: 5px;
+    width: 0%;
+}
 
 .songTitle,
 .songDetails {
@@ -88,16 +125,6 @@ body {
     width: 100px;
 }
 
-#seekBackdrop {
-    width: 500px;
-    background-color: rgb(60, 60, 60);;
-}
-
-#seekBar {
-    background-color: white;
-    height: 10px;
-    width: 0%;
-}
 
 /* DROP FILE */
 /*************/

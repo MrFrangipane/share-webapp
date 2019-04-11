@@ -30,22 +30,25 @@
         <audio src="" id="audioPlayer">
             HTML is not supported :/
         </audio>
-        <table>
+        <table id="playerControls">
             <tr>
-                <td><img id="previous" src="site/icons/previous.png"></td>
-                <td><img id="stop" src="site/icons/stop.png"></td>
-                <td><img id="play" src="site/icons/play.png"></td>
-                <td><img id="pause" src="site/icons/pause.png"></td>
-                <td><img id="next" src="site/icons/next.png"></td>
+                <td><div id="previous"></div></td>
+                <td><div id="stop"></div></td>
+                <td><div id="playpause"></div></td>
+                <td><div id="next"></div></td>
+                <td><div class="playerControlSpacer"></div></td>
+                <td><div id="currentTime">1:36</div></td>
                 <td><div id="seekBackdrop">
                     <div id="seekBar"></div>
                 </div></td>
+                <td><div id="totalTime">5:02</div></td>
+                <td><div class="playerControlSpacer"></div></td>
+                <td><div id="volumeIcon"></div></td>
             </tr>
         </table>
     </div>
 
     <?php include 'app/playlist.php'; ?>
-
 
     <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="site/audioplayer.js"></script>
