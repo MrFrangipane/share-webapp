@@ -119,7 +119,9 @@ $("#form").submit(function(event)
     event.preventDefault();
 
     if( isUploading ) { return false; }
-
+    
+    if( droppedFile == null ) { return false; }
+    
     var songName = prompt("Please enter a song name", "");
     if( songName == null || songName == "" ) { return false; }
 
@@ -156,7 +158,7 @@ $("#form").submit(function(event)
         success: function(result) {
             progress.width("0%");
             GUISetMessage("Upload succes !");
-            var droppedFile = null;
+            droppedFile = null;
             console.log(result);
             GUISetUploading(false);
         }
