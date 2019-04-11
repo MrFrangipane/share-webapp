@@ -18,46 +18,60 @@ body {
     box-sizing: border-box;
     background-color: black;
     position: fixed;
-    left:0;
+    left: 0;
     bottom: 0;
     border-top: 1px solid darkgrey;
 }
 
+/*
+table, th, td {
+    border: 1px solid green;
+}
+*/
+
 #playerControls {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-#previous, #stop, #playpause, #next, #volumeIcon {
-    width: 25px;
-    height: 18px;
-    background-size: 60%;
+#previous, #playpause, #next, #volumeIcon {
+    width: 30px;
+    height: 20px;
+    background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#previous { background-image: url("icons/previous.png"); }
-#stop { background-image: url("icons/stop.png"); }
-#playpause { background-image: url("icons/play.png"); }
-#next { background-image: url("icons/next.png"); }
-#volumeIcon{ background-image: url("icons/vol-01.png"); }
+#previous { background-image: url(icons/previous.png); }
+#playpause { background-image: url(icons/play.png); background-size: 20px; }
+#next { background-image: url(icons/next.png); }
+#volumeIcon{ background-image: url(icons/vol-01.png); }
 
 .playerControlSpacer {
-    width: 35px;
+    width: 10px;
     height: 25px;
 }
 
 #currentTime, #totalTime {
-    width: 50px;
+    width: 55px;
     height: 25px;
     line-height: 25px;
     text-align: center;
     font-size: 80%;
 }
 
+div.playerMargin {
+    width: 100px;
+}
+
+td.expanding {
+    width: 99%;
+}
+
 #seekBackdrop {
-    width: 500px;
-    background-color: rgb(60, 60, 60);;
+    width: 98%;
+    background-color: rgb(60, 60, 60);
+    margin: auto;
 }
 
 #seekBar {
@@ -110,7 +124,7 @@ body {
     margin-left: 200px;
     width: 150px;
     height: 80px;
-    background-image: url("icons/logo.png");
+    background-image: url(icons/logo.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 100% 50%;
@@ -133,7 +147,7 @@ body {
     margin: 10px;
     width: 100px;
     height: 80px;
-    background-image: url("icons/upload.png");
+    background-image: url(icons/upload.png);
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;

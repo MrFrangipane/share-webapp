@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.7, shrink-to-fit=no">
     <title>Frangitron Share</title>
     <link rel="stylesheet" type="text/css" href="site/style.css">
 </head>
@@ -32,18 +32,19 @@
         </audio>
         <table id="playerControls">
             <tr>
+                <td><div class="playerMargin"></div></td>
                 <td><div id="previous"></div></td>
-                <td><div id="stop"></div></td>
                 <td><div id="playpause"></div></td>
                 <td><div id="next"></div></td>
                 <td><div class="playerControlSpacer"></div></td>
-                <td><div id="currentTime">1:36</div></td>
-                <td><div id="seekBackdrop">
+                <td><div id="currentTime">0:00</div></td>
+                <td class="expanding"><div id="seekBackdrop">
                     <div id="seekBar"></div>
                 </div></td>
-                <td><div id="totalTime">5:02</div></td>
+                <td><div id="totalTime">0:00</div></td>
                 <td><div class="playerControlSpacer"></div></td>
                 <td><div id="volumeIcon"></div></td>
+                <td><div class="playerMargin"></div></td>
             </tr>
         </table>
     </div>

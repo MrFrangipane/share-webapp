@@ -7,7 +7,8 @@ function select(event) {
     event.preventDefault();
     currentSong = $(this).index();
     updatePlayer();
-    $("#audioPlayer")[0].play();
+    updateProgress();
+    player.play();
 }
 
 
@@ -29,6 +30,12 @@ function ended() {
 function updateProgress() {
     var progress = (player.currentTime / player.duration) * 100;
     seekBar.width(progress + "%");
+
+    if( player.paused ) {
+        $('#playpause').css('background-image', 'url(site/icons/play.png)')
+    } else {
+        $('#playpause').css('background-image', 'url(site/icons/pause.png)')
+    }
 }
 
 
