@@ -1,15 +1,22 @@
-var currentSong = 0;
 var player = $("#audioPlayer")[0];
-var seekBarBackdrop = $("#seekClickable");
-var seekBar = $("#seekBar");
+
+var currentSong = 0;
+var playlistRows = $("#playlist tr");
+
+var currentAuthor = 0;
+var authorsRows = $("#authors tr");
+
 var buttonPlay = $("#playpause");
 var buttonPrevious = $("#previous");
 var buttonNext = $("#next");
-var playlistRows = $("#playlist tr");
-var headerSongTitle = $("#songTitle");
-var headerSongDetails = $("#songDetails");
+
+var seekBarBackdrop = $("#seekClickable");
+var seekBar = $("#seekBar");
 var currentTime = $("#currentTime");
 var totalTime = $("#totalTime");
+
+var headerSongTitle = $("#songTitle");
+var headerSongDetails = $("#songDetails");
 
 
 function select(event) {
@@ -105,9 +112,13 @@ function updateProgress() {
 
 
 function updatePlayer() {
-    playlistRows.removeClass("current-song");
+    playlistRows.removeClass("selected");
+    authorsRows.removeClass("selected");
 
-    var tableRow = $("#playlist tr:eq(" + currentSong + ")");
+    var authorsRow = $("#authors tr:eq(" + currentAuthor + ")");
+    authorsRow.addClass("selected");
+
+    var playlistRow = $("#playlist tr:eq(" + currentSong + ")");
     var filename = $("#playlist tr:eq(" + currentSong + ") p:eq(2)").text();
     var artistname = $("#playlist tr:eq(" + currentSong + ") p:eq(0)").text();
     var songname = $("#playlist tr:eq(" + currentSong + ") p:eq(1)").text();
@@ -115,8 +126,8 @@ function updatePlayer() {
     headerSongTitle.html(artistname);
     headerSongDetails.html(songname);
     
-    tableRow.scrollintoview();
-    tableRow.addClass("current-song");
+    playlistRow.scrollintoview();
+    playlistRow.addClass("selected");
 
     player.src = filename;
     player.load();

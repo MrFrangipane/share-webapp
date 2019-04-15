@@ -8,13 +8,14 @@
     <link rel="stylesheet" type="text/css" href="site/style.css">
 </head>
 <body>
-    <div id="header">
+
+<div id="header">
         <table>
             <tr>
                 <td class="headerLogo"></td>
                 <td class="headerSong">
-                    <p id="songTitle" class="songTitle"></p>
-                    <p id="songDetails" class="songDetails"></p>
+                    <p id="songTitle" class="title"></p>
+                    <p id="songDetails" class="details"></p>
                 </td>
                 <td></td>
                 <td class="headerUpload">
@@ -40,42 +41,51 @@
         </table>
     </div>
 
-    <div id="player">
-        <audio src="" id="audioPlayer">
-            HTML is not supported :/
-        </audio>
-        <table id="playerControls">
-            <tr>
-                <td><div class="playerMargin"></div></td>
-                <td><div id="previous"></div></td>
-                <td><div id="playpause"></div></td>
-                <td><div id="next"></div></td>
-                <td><div class="playerControlSpacer"></div></td>
-                <td><div id="currentTime">0:00</div></td>
-                <td class="expanding">
-                    <div id="seekClickable">
-                        <div id="seekBackdrop">
-                            <div id="seekBar"></div>
-                        </div>
+<div id="authorsScrollable">
+    <table id="authors">
+        <tr><td>
+            <p class="title">All</p>
+            <p class="details">Everyone</p>
+        </td></tr>
+    </table>
+</div>
+
+<?php include 'app/playlist.php'; ?>
+
+<div id="player">
+    <audio src="" id="audioPlayer">
+        HTML is not supported :/
+    </audio>
+    <table id="playerControls">
+        <tr>
+            <td><div class="playerMargin"></div></td>
+            <td><div id="previous"></div></td>
+            <td><div id="playpause"></div></td>
+            <td><div id="next"></div></td>
+            <td><div class="playerControlSpacer"></div></td>
+            <td><div id="currentTime">0:00</div></td>
+            <td class="expanding">
+                <div id="seekClickable">
+                    <div id="seekBackdrop">
+                        <div id="seekBar"></div>
                     </div>
-                </td>
-                <td><div id="totalTime">0:00</div></td>
-                <td><div class="playerControlSpacer"></div></td>
-                <td><div id="volumeIcon"></div></td>
-                <td><div class="playerMargin"></div></td>
-            </tr>
-        </table>
-    </div>
+                </div>
+            </td>
+            <td><div id="totalTime">0:00</div></td>
+            <td><div class="playerControlSpacer"></div></td>
+            <td><div id="volumeIcon"></div></td>
+            <td><div class="playerMargin"></div></td>
+        </tr>
+    </table>
+</div>
 
-    <?php include 'app/playlist.php'; ?>
-
-    <script src="site/jquery.js"></script>
-    <script src="site/jquery.scrollintoview.js"></script>
-    <script src="site/audioplayer.js"></script>
-    <script src="site/filedropper.js"></script>
-    <script>
-        setupAudioPlayer();
-        setupUploader();
-    </script>
+<script src="site/jquery.js"></script>
+<script src="site/jquery.scrollintoview.js"></script>
+<script src="site/audioplayer.js"></script>
+<script src="site/filedropper.js"></script>
+<script>
+    setupAudioPlayer();
+    setupUploader();
+</script>
 </body>
 </html>

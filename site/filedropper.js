@@ -101,12 +101,18 @@ $(document).on('change', '#file', function(e)
 });
 
 
+function fileIsValid()
+{
+    var isValid = droppedFile.type.match('audio/mpeg') || droppedFile.type.match('audio/mp3');
+    isValid = isValid && droppedFile.name.endsWith('.mp3')
+    return isValid;
+}
+
 function updateMessage()
 {
-    var match = droppedFile.type.match('audio/mpeg') || droppedFile.type.match('audio/mp3');
-    if( !match )
+    if( !fileIsValid() )
     {
-        GUIResetMessage();
+        GUISetMessage("File must be ONE .mp3");
     } else
     {
         GUISetMessage(droppedFile.name);
@@ -117,6 +123,8 @@ function updateMessage()
 $("#form").submit(function(event)
 {
     event.preventDefault();
+
+    if( !fileIsValid ) { return false; }
 
     if( isUploading ) { return false; }
     

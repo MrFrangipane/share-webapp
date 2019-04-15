@@ -81,19 +81,27 @@ td.expanding {
     width: 0%;
 }
 
-.songTitle,
-.songDetails {
+.title,
+.details {
     margin: 5px;
 }
 
-.songTitle {
+.title {
     font-size: 105%;
     font-weight: bold;
 }
 
-.songDetails {
+.details {
     font-size: 80%;
     color: darkgrey;
+}
+
+.selected td {
+    background-color: rgb(120, 120, 120);
+}
+
+.selected p {
+    color: white;
 }
 
 /* HEADER */
@@ -206,24 +214,52 @@ td.expanding {
     width: 0%;
 }
 
+/* AUTHORS */
+/***********/
+#authorsScrollable {
+    box-sizing: border-box;
+    position: fixed;
+    left:15%;
+    margin-left: -125px;
+    top: 110px;
+    bottom: 60px;
+    overflow-y : auto;
+    overflow-x : hidden;
+}
+
+#authors {
+    border-collapse:collapse;
+    width: 250px;
+}
+
+#authors td {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(80, 80, 80);
+    padding-left: 10px;
+}
+
+#authors tr:hover {
+    background-color: rgb(60, 60, 60);
+}
+
 /* PLAYLIST */
 /************/
 #playlistScrollable {
+    background-color: rgb(30, 30, 30);
     box-sizing: border-box;
     position: fixed;
-    left:0;
     top: 110px;
     bottom: 60px;
-    width: 100%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
     overflow-y : auto;
     overflow-x : hidden;
 }
 
 #playlist {
-    margin-left: auto;
-    margin-right: auto;
     border-collapse:collapse;
-    width: 500px;
+    width: 100%;
 }
 
 #playlist td {
@@ -234,12 +270,4 @@ td.expanding {
 
 #playlist tr:hover {
     background-color: rgb(60, 60, 60);
-}
-
-#playlist .current-song td {
-    background-color: rgb(120, 120, 120);
-}
-
-#playlist .current-song p {
-    color: white;
 }
