@@ -120,17 +120,19 @@ function updatePlayer() {
 
     var playlistRow = $("#playlist tr:eq(" + currentSong + ")");
     var filename = $("#playlist tr:eq(" + currentSong + ") p:eq(2)").text();
-    var artistname = $("#playlist tr:eq(" + currentSong + ") p:eq(0)").text();
-    var songname = $("#playlist tr:eq(" + currentSong + ") p:eq(1)").text();
+    var artistname = $("#playlist tr:eq(" + currentSong + ") p:eq(1)").text();
+    var songname = $("#playlist tr:eq(" + currentSong + ") p:eq(0)").text();
 
-    headerSongTitle.html(artistname);
-    headerSongDetails.html(songname);
+    headerSongTitle.html(songname);
+    headerSongDetails.html(artistname);
     
     playlistRow.scrollintoview();
     playlistRow.addClass("selected");
 
     player.src = filename;
     player.load();
+
+    $("title").text(songname + " - " + artistname + " | Frangitron Share");
 
     updateProgress();
 }
