@@ -1,22 +1,16 @@
-var player = $("#audioPlayer")[0];
-
 var currentSong = 0;
-var playlistRows = $("#playlist tr");
-
-var currentAuthor = 0;
-var authorsRows = $("#authors tr");
-
+var player = $("#audioPlayer")[0];
+var seekBarBackdrop = $("#seekClickable");
+var seekBar = $("#seekBar");
 var buttonPlay = $("#playpause");
 var buttonPrevious = $("#previous");
 var buttonNext = $("#next");
-
-var seekBarBackdrop = $("#seekClickable");
-var seekBar = $("#seekBar");
-var currentTime = $("#currentTime");
-var totalTime = $("#totalTime");
-
+var playlistRows = $("#playlist tr");
 var headerSongTitle = $("#songTitle");
 var headerSongDetails = $("#songDetails");
+var headerAuthorIcon = $("#headerAuthorIcon");
+var currentTime = $("#currentTime");
+var totalTime = $("#totalTime");
 
 
 function select(event) {
@@ -112,27 +106,23 @@ function updateProgress() {
 
 
 function updatePlayer() {
-    playlistRows.removeClass("selected");
-    authorsRows.removeClass("selected");
+    playlistRows.removeClass("current-song");
 
-    var authorsRow = $("#authors tr:eq(" + currentAuthor + ")");
-    authorsRow.addClass("selected");
-
-    var playlistRow = $("#playlist tr:eq(" + currentSong + ")");
+    var tableRow = $("#playlist tr:eq(" + currentSong + ")");
     var filename = $("#playlist tr:eq(" + currentSong + ") p:eq(2)").text();
-    var artistname = $("#playlist tr:eq(" + currentSong + ") p:eq(1)").text();
-    var songname = $("#playlist tr:eq(" + currentSong + ") p:eq(0)").text();
+    var artistname = $("#playlist tr:eq(" + currentSong + ") p:eq(0)").text();
+    var songname = $("#playlist tr:eq(" + currentSong + ") p:eq(1)").text();
+    var authoricon = $("#playlist tr:eq(" + currentSong + ") td:eq(0) img").attr('src');
 
-    headerSongTitle.html(songname);
-    headerSongDetails.html(artistname);
+    headerSongTitle.html(artistname);
+    headerSongDetails.html(songname);
+    headerAuthorIcon.css('background-image', 'url(' + authoricon, + ')');
     
-    playlistRow.scrollintoview();
-    playlistRow.addClass("selected");
+    tableRow.scrollintoview();
+    tableRow.addClass("current-song");
 
     player.src = filename;
     player.load();
-
-    $("title").text(songname + " - " + artistname + " | Frangitron Share");
 
     updateProgress();
 }

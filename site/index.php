@@ -18,6 +18,7 @@
                     <p id="songTitle" class="title"></p>
                     <p id="songDetails" class="details"></p>
                 </td>
+                <td id="headerAuthorIcon" class="headerAuthor"></td>
                 <td></td>
                 <td class="headerUpload">
                     <table id="uploadTable">

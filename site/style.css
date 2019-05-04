@@ -103,6 +103,15 @@ td.expanding {
     width: 110px;
 }
 
+.headerAuthor {
+    width: 100px;
+    height: 100px;
+    /*background-image: url(icons/logo.png);*/
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
 #header {
     width: 100%;
     font-size: 115%;
