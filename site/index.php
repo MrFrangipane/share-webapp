@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.7, shrink-to-fit=no">
     <title>Frangitron Share</title>
     <link rel="stylesheet" type="text/css" href="site/style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 
