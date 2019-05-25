@@ -15,7 +15,7 @@ $played_icon = 'site/icons/never-played.png';
 <div id="playlistScrollable">
     <table id="playlist">
         <?php while ($row = $result->fetch()) : ?>
-            <tr><td class="authorTd"><img class="authorIcon" src="authors/<?php echo htmlspecialchars($row['author']) ?>.png"></td>
+            <tr><td class="authorTd"><img class="authorIcon" src="authors/<?php echo htmlspecialchars($row['author_id']) ?>.png"></td>
             <td>
                 <p class="songTitle"><?php echo htmlspecialchars($row['song']) ?></p>
                 <p class="songDetails"><?php echo htmlspecialchars($row['author']) ?></p>
