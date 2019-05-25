@@ -1,6 +1,6 @@
 <?php
-require_once("../src/database.php");
-require_once("../src/rest.php");
+require_once(__DIR__."/database.php");
+require_once(__DIR__."/rest.php");
 
 $user = $_SERVER['REDIRECT_REMOTE_USER'];
 $response['status'] = 0;
