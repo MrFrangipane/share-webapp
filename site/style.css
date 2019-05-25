@@ -260,3 +260,13 @@ td.expanding {
     width: 48px;
     text-align: center;
 }
+
+.playedTd {
+    width: 12px;
+    text-align: center;
+}
+
+.playedIcon {
+    width: 8px;
+    padding-right: 10px;
+}
