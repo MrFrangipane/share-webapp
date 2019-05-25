@@ -1,7 +1,7 @@
 var form = $("#form")[0];
 var message = $("#message");
 var droppedFile = null;
-var progress = $("#uploadProgress")
+var progress = $("#uploadProgress");
 var isUploading = false;
 
 
@@ -82,7 +82,7 @@ $(document).on('drop', '#dropfile', function(e)
     $(this).removeClass("dragHover");
 
     if(e.originalEvent.dataTransfer ) {
-        if(e.originalEvent.dataTransfer.files.length == 1) {
+        if(e.originalEvent.dataTransfer.files.length === 1) {
             droppedFile = e.originalEvent.dataTransfer.files[0];
             updateMessage();
         }
@@ -104,7 +104,7 @@ $(document).on('change', '#file', function(e)
 function fileIsValid()
 {
     var isValid = droppedFile.type.match('audio/mpeg') || droppedFile.type.match('audio/mp3');
-    isValid = isValid && droppedFile.name.endsWith('.mp3')
+    isValid = isValid && droppedFile.name.endsWith('.mp3');
     return isValid;
 }
 
@@ -131,7 +131,7 @@ $("#form").submit(function(event)
     if( droppedFile == null ) { return false; }
     
     var songName = prompt("Please enter a song name", "");
-    if( songName == null || songName == "" ) { return false; }
+    if( songName == null || songName === "" ) { return false; }
 
     GUISetUploading(true);
 
@@ -142,7 +142,7 @@ $("#form").submit(function(event)
     formData.append("songName", songName);
 
     $.ajax({
-        url:'upload',
+        url:'api/v1/upload',
 		type: 'POST',
 		data: formData,
         cache: false,
@@ -165,7 +165,7 @@ $("#form").submit(function(event)
 
         success: function(result) {
             progress.width("0%");
-            if( result["status"] == 1 ) {
+            if( result["status"] === 1 ) {
                 GUISetMessage("Upload succes !");
             } else {
                 GUISetMessage(result['error']);

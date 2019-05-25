@@ -8,7 +8,7 @@ $result = request('
     ORDER BY user_.name ASC, song.timestamp DESC
 ');
 
-$played_icon = 'site/icons/never-played.png';
+$played_icon = 'icons/never-played.png';
 
 ?>
 

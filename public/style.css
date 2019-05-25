@@ -78,7 +78,7 @@ td.expanding {
 #seekBar {
     background-color: white;
     height: 5px;
-    width: 0%;
+    width: 0;
 }
 
 .songTitle,
@@ -212,7 +212,7 @@ td.expanding {
 #uploadProgress {
     background-color: white;
     height: 5px;
-    width: 0%;
+    width: 0;
 }
 
 /* PLAYLIST */

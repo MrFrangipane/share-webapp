@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.7, shrink-to-fit=no">
     <title>Frangitron Share</title>
     <link rel="stylesheet" type="text/css" href="site/style.css">
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="icons/favicon.png" />
 </head>
 <body>
     <div id="header">
@@ -69,12 +69,12 @@
         </table>
     </div>
 
-    <?php include 'app/playlist.php'; ?>
+    <?php include '../src/playlist.php'; ?>
 
-    <script src="site/jquery.js"></script>
-    <script src="site/jquery.scrollintoview.js"></script>
-    <script src="site/audioplayer.js"></script>
-    <script src="site/filedropper.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.scrollintoview.js"></script>
+    <script src="audioplayer.js"></script>
+    <script src="filedropper.js"></script>
     <script>
         setupAudioPlayer();
         setupUploader();

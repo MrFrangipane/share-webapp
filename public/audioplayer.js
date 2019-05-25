@@ -39,7 +39,7 @@ function play(event) {
 function previous(event) {
     event.preventDefault();
     currentSong--;
-    if( currentSong == -1 )
+    if( currentSong === -1 )
         currentSong = playlistRows.length - 1;
 
     updatePlayer();
@@ -50,7 +50,7 @@ function previous(event) {
 function next(event) {
     event.preventDefault();
     currentSong++;
-    if( currentSong == playlistRows.length )
+    if( currentSong === playlistRows.length )
         currentSong = 0;
 
     updatePlayer();
@@ -59,8 +59,7 @@ function next(event) {
 
 function seek(event) {
     var mousePosX = event.clientX - seekBarBackdrop.offset().left;
-    var songPos = player.duration * (mousePosX / seekBarBackdrop.outerWidth());
-    player.currentTime = songPos;
+    player.currentTime = player.duration * (mousePosX / seekBarBackdrop.outerWidth());
 }
 
 

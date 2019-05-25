@@ -1,6 +1,6 @@
 <?php
 
-function request($request_)
+function connect()
 {
     $infos = json_decode(file_get_contents("app/config.json"), true);
     $host = $infos["host"];
@@ -8,8 +8,14 @@ function request($request_)
     $username = $infos["username"];
     $password = $infos["password"];
 
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    return $conn;
+}
+
+function request($request_)
+{
     try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conn = connect();
 
         $result = $conn->query($request_);
         $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -24,14 +30,8 @@ function request($request_)
 
 function exec_($request_)
 {
-    $infos = json_decode(file_get_contents("app/config.json"), true);
-    $host = $infos["host"];
-    $dbname = $infos["dbname"];
-    $username = $infos["username"];
-    $password = $infos["password"];
-
     try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conn = connect();
 
         $result = $conn->exec($request_);
         return $conn->lastInsertId();
