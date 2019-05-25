@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__."/database.php");
 require_once(__DIR__."/rest.php");
+define('PUBLIC_ROOT', dirname(__DIR__).'/public/');
 
 $user = $_SERVER['REDIRECT_REMOTE_USER'];
 $response['status'] = 0;
@@ -19,7 +20,7 @@ if(isset($_POST["songName"])) {
 
         if( $inserted_id != 0 )
         {
-            $target_file = "songs/" . $inserted_id . ".mp3";
+            $target_file = PUBLIC_ROOT . "songs/" . $inserted_id . ".mp3";
             move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
 
             $response['newFile'] = $target_file;
