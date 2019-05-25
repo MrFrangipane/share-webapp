@@ -75,9 +75,9 @@ function updateProgress() {
 
     // Buttons
     if( player.paused ) {
-        buttonPlay.css('background-image', 'url(site/icons/play.png)')
+        buttonPlay.css('background-image', 'url(icons/play.png)')
     } else {
-        buttonPlay.css('background-image', 'url(site/icons/pause.png)')
+        buttonPlay.css('background-image', 'url(icons/pause.png)')
     }
     
     // Time

@@ -3,3 +3,5 @@
 config.json
 .idea/
 test.py
+public/authors/
+public/songs/

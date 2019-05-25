@@ -142,7 +142,7 @@ $("#form").submit(function(event)
     formData.append("songName", songName);
 
     $.ajax({
-        url:'api/v1/upload',
+        url:'upload',
 		type: 'POST',
 		data: formData,
         cache: false,
