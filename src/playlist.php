@@ -22,9 +22,9 @@ $download_icon = 'icons/download.png';
                 <p style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</p>
             </td>
             <td class="downloadTd">
-                <form method="get" action="songs/<?php echo htmlspecialchars($row['id']) ?>.mp3">
-                    <button type="submit"><img class="downloadIcon" src="<?php echo htmlspecialchars($download_icon) ?>"></button>
-                </form>
+                <a href="api/v1/download.php?file=songs/<?php echo htmlspecialchars($row['id']) ?>.mp3">
+                    <img class="downloadIcon" src="<?php echo htmlspecialchars($download_icon) ?>">
+                </a>
             </td>
             </tr>
         <?php endwhile; ?>

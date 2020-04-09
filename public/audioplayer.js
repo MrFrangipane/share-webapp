@@ -14,7 +14,7 @@ var totalTime = $("#totalTime");
 
 
 function select(event) {
-    event.preventDefault();
+    //event.preventDefault();
     currentSong = $(this).index();
     updatePlayer();
     player.play();
