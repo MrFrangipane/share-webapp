@@ -8,7 +8,7 @@ $result = request('
     ORDER BY user_.name ASC, song.timestamp DESC
 ');
 
-$played_icon = 'icons/never-played.png';
+$download_icon = 'icons/download.png';
 
 ?>
 
@@ -21,7 +21,11 @@ $played_icon = 'icons/never-played.png';
                 <p class="songDetails"><?php echo htmlspecialchars($row['author']) ?></p>
                 <p style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</p>
             </td>
-            <td class="playedTd"><img class="playedIcon" src="<?php echo htmlspecialchars($played_icon) ?>"></td>
+            <td class="downloadTd">
+                <form method="get" action="songs/<?php echo htmlspecialchars($row['id']) ?>.mp3">
+                    <button type="submit"><img class="downloadIcon" src="<?php echo htmlspecialchars($download_icon) ?>"></button>
+                </form>
+            </td>
             </tr>
         <?php endwhile; ?>
     </table>

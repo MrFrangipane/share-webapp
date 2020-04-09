@@ -261,12 +261,13 @@ td.expanding {
     text-align: center;
 }
 
-.playedTd {
+.downloadTd {
     width: 12px;
     text-align: center;
 }
 
-.playedIcon {
+.downloadIcon {
+    cursor: pointer;
     width: 8px;
     padding-right: 10px;
 }
