@@ -22,7 +22,7 @@ $download_icon = 'icons/download.png';
                 <p style="display:none;">songs/<?php echo htmlspecialchars($row['id']) ?>.mp3</p>
             </td>
             <td class="downloadTd">
-                <a href="api/v1/download.php?file=<?php echo htmlspecialchars('songs/' . $row['id']) ?>.mp3">
+                <a href="api/v1/download.php?id=<?php echo urlencode($row['id']) ?>&name=<?php echo urlencode($row['song']) ?>">
                     <img class="downloadIcon" src="<?php echo htmlspecialchars($download_icon) ?>">
                 </a>
             </td>
